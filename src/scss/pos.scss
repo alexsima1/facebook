@@ -1,0 +1,198 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* -----------------------------banner ----------------------------------------------*/
+#banner {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 100%;
+        aspect-ratio: 2.2;
+
+    }
+}
+
+#bannerInfo {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    section:first-of-type {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    section:nth-of-type(2) {
+        display: flex;
+        flex-direction: row-reverse;
+
+        align-items: center;
+
+    }
+}
+
+#bannerBtns {
+    display: flex;
+
+    justify-content: flex-end;
+
+}
+
+/* ------------------------------------------------------------------------- */
+/* #mcs {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    justify-content: center;
+    align-items: center;
+
+
+} */
+
+#mainContent {
+    display: flex;
+    justify-content: center;
+
+
+    /*     display: grid;
+    grid-template-columns: 1fr 1fr; */
+
+}
+
+/* -----------------------------------------side nav ------------------------------------*/
+
+#sideNav {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#groupSettings {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+    }
+}
+
+#lastMedia {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+/*  ---------------------posts, main content -------------------------------*/
+
+#posts {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#postsReccomended {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* the post itself */
+#post {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#postUser {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+#postBtns {
+    display: flex;
+    justify-content: space-between;
+}
+
+#postComments {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        display: flex;
+
+        section {
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
+}
+
+@media(max-width:500px) {
+    html {
+        font-size: 0.8rem;
+    }
+
+    #postsReccomended {
+        display: none;
+
+    }
+
+    #posts,
+    #sideNav {
+        width: auto;
+
+    }
+
+}
+
+@media(max-width:768px) {
+    #mainContent {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #sideNav {
+        width: min(450px, 60dvh);
+
+    }
+
+    #posts {
+        width: min(450px, 60dvh);
+
+    }
+
+}
+
+@media(min-width:900px) {
+    #sideNav {
+        width: 300px;
+
+    }
+
+    #posts {
+        width: 600px;
+
+    }
+}
